@@ -10,12 +10,12 @@ public class FileUploadDemo {
 	public static void main(String[] args) throws InterruptedException {
 
 		//Path of the file to upload
-		String filePath="/Users/syntax/Desktop/myFile.png";
+		String filePath="C:\\Users\\Mike\\myFile.txt";
 		
 		//open browser and navigate to the-internet.herokuapp.com
 		String url = "https://the-internet.herokuapp.com/";
 		System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, "true");
-		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get(url);
 		
@@ -31,7 +31,7 @@ public class FileUploadDemo {
 		driver.findElement(By.id("file-submit")).click();
 		Thread.sleep(3000);
 		
-		driver.quit();
+		//driver.quit();
 		
 		
 	}

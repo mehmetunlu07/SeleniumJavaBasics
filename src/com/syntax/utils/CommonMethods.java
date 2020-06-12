@@ -249,4 +249,22 @@ public class CommonMethods extends BaseClass {
 			e.printStackTrace();
 		}
 	}
+	
+	/**
+	 * this method will select a date from the calendar
+	 * 
+	 * @param element
+	 * @param text
+	 */
+	
+	public static void selectCalendarDate(List<WebElement> element, String text) {
+		for (WebElement pickDate : element) {
+			if (pickDate.isEnabled()) {
+				if (pickDate.getText().equals(text)) {
+					pickDate.click();
+					break;
+				}
+			}
+		}
+	}
 }

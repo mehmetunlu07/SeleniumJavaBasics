@@ -13,7 +13,7 @@ public class DragAndDrop {
 		String url="https://jqueryui.com/droppable/";
 		
 		System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, "true");
-		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get(url);
 		
@@ -28,13 +28,13 @@ public class DragAndDrop {
 		Actions action=new Actions(driver);
 		//drag a file and drop it in the source. Longer way
 		//action.clickAndHold(drag).moveToElement(drop).release().perform();
-
+		Thread.sleep(3000);
 		//use dragAndDrop() method to drag and drop elemet.
 		action.dragAndDrop(drag, drop).perform();
 		
 		
 		Thread.sleep(5000);
-		driver.quit();
+		//driver.quit();
 
 	}
 
